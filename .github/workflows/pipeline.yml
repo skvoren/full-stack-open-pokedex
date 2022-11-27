@@ -24,4 +24,5 @@ jobs:
         with:
           build: npm run build
           start: npm run start-prod
+          config-file: cypress.json
           wait-on: http://localhost:5000
