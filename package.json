@@ -11,6 +11,9 @@
     "build": "webpack --mode production",
     "test:e2e": "cypress open"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smartlyio/fullstackopen-cicd.git"
