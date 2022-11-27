@@ -2,6 +2,9 @@ name: Lint
 on:
   push:
     branches: master
+  pull_request:
+    branches: [ master ]
+    types: [ opened, synchronize ]
 
 jobs:
   simple_deployment_pipeline:
@@ -31,6 +34,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "pokemon-skvoren" #Must be unique in Heroku
           heroku_email: "skvoren@outlook.com"
-          healthcheck: "https://pokemon-skvoren.herokuapp.com/health"
+          healthcheck: "https://pokemon-skvoren.herokuapp.com/health-check"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
