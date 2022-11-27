@@ -38,10 +38,6 @@ jobs:
           healthcheck: "https://pokemon-skvoren.herokuapp.com/health-check"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
-  tag_release:
-    needs: [ simple_deployment_pipeline ]
-    runs-on: ubuntu-20.04
-    steps:
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.36.0
         with:
