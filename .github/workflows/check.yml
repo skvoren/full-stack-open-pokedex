@@ -1,0 +1,14 @@
+name: Check
+on:
+  schedule:
+    - cron: '30 5 * * 1,3'
+    - cron: '30 5 * * 2,4'
+
+jobs:
+  check:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: URL Health Check
+        uses: Jtalk/url-health-check-action@v3
+        with:
+          url: https://pokemon-skvoren.herokuapp.com/
