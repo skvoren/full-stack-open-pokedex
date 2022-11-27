@@ -4,8 +4,8 @@
   "description": "Full Stack Open",
   "main": "src/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open --mode development",
-    "start-prod": "cross-env NODE_ENV=production node app.js",
+    "start-dev": "cross-env NODE_ENV=development webpack-dev-server --open --mode development",
+    "start": "cross-env NODE_ENV=production node app.js",
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
