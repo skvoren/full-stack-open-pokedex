@@ -28,10 +28,9 @@ jobs:
           build: npm run build
           start: npm run start
           wait-on: http://localhost:5000
-      - name: deploy
-        if: ${{ github.event_name == 'push' }}
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        if: ${{ github.event_name == 'push' }}
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "pokemon-skvoren" #Must be unique in Heroku
