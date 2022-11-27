@@ -31,3 +31,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "pokemon-skvoren" #Must be unique in Heroku
           heroku_email: "skvoren@outlook.com"
+          healthcheck: "https://pokemon-skvoren.herokuapp.com//health"
+          checkstring: "ok"
